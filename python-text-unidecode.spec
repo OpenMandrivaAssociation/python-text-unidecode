@@ -1,5 +1,6 @@
 # Created by pyp2rpm-3.3.5
 %global pypi_name text-unidecode
+%bcond_with bootstrap
 
 Name:           python-%{pypi_name}
 Version:        1.3
@@ -13,13 +14,16 @@ BuildArch:      noarch
 
 BuildRequires:  python3-devel
 BuildRequires:  python3dist(setuptools)
+%if %{with Bootstrap}
+BuildRequires:	python-pytest
+%endif
 
 %description
 Text-Unidecode text-unidecode is the most basic port of the Text::Unidecode <
 Perl library.There are other Python ports of Text::Unidecode (unidecode_ and
 isounidecode_). unidecode_ is GPL; isounidecode_ uses too much memory, and it
 didn't support Python 3 when this package was created.You can redistribute it
-and/or modify this port under the terms of either:* Artistic License_, or * GPL
+and/or modify this port under the terms of either the Artistic License, GPL
 or GPLv2+
 
 %prep
@@ -33,8 +37,10 @@ rm -rf %{pypi_name}.egg-info
 %install
 %py3_install
 
+%if %{with Bootstrap}
 %check
 %{__python3} setup.py test
+%endif
 
 %files -n python-%{pypi_name}
 %license LICENSE
