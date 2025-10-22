@@ -2,7 +2,7 @@
 
 Name:           python-%{pypi_name}
 Version:        1.3
-Release:        1
+Release:        2
 Summary:        The most basic Text::Unidecode port
 Group:          Development/Python
 License:        Artistic License
