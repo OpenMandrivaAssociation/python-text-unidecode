@@ -10,8 +10,8 @@ URL:            https://github.com/kmike/text-unidecode/
 Source0:        https://github.com/kmike/text-unidecode/archive/refs/tags/%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:  python-setuptools
-BuildRequires:	python-pytest
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(pytest)
 
 %description
 Text-Unidecode text-unidecode is the most basic port of the Text::Unidecode <
