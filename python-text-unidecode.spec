@@ -7,7 +7,7 @@ Summary:        The most basic Text::Unidecode port
 Group:          Development/Python
 License:        Artistic License
 URL:            https://github.com/kmike/text-unidecode/
-Source0:        https://github.com/kmike/text-unidecode/archive/refs/tags/%{version}.tar.gz
+Source0:        https://github.com/kmike/text-unidecode/archive/%{version}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
 BuildRequires:  python%{pyver}dist(setuptools)
