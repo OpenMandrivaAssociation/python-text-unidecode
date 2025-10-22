@@ -43,7 +43,3 @@ export PYTHONPATH=%{buildroot}%{python3_sitelib}:$PYTHONPATH
 %{python3_sitelib}/text_unidecode
 %{python3_sitelib}/text_unidecode-%{version}-py%{python3_version}.egg-info
 
-%changelog
-* Tue Oct 21 2025 Samuil Ivanov <samuil.ivanovbg@gmail.com> - 1.3-1
-- Updated spec to use Python 3.11
-- Verified tests run correctly with Python 3.11
